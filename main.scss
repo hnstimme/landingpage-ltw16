@@ -1,13 +1,21 @@
-.lw-grid{
+body{
+  margin: 0;
+  padding: 0;
+}
+
+$grey: #888;
+
+.lw{
   font-family: 'Open Sans';
 
   header{
     background-image: url('img/bg.jpg');
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
     font-weight: 300;
+    padding: 3rem;
 
     h1{
       text-transform: uppercase;
@@ -24,17 +32,58 @@
   section{
     h2,
     h3{
-      font-weight: 500;
+      font-weight: 600;
       text-align: center;
+      text-transform: uppercase;
     }
     h2{
-      font-size: 1.5rem;
+      font-size: 1.35rem;
+    }
+  }
+
+  section.issues{
+    margin-bottom: 2rem;
+
+    h2{
+      margin: 3rem auto 1rem auto;
+      line-height: 0.25;
+      text-align: center;
+
+      span{
+        display: inline-block;
+        position: relative;
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          border-bottom: 2px solid black;
+          top: 0;
+          width: 140%;
+        }
+        &:before {
+          right: 100%;
+          margin-right: 15px;
+        }
+        &:after {
+          left: 100%;
+          margin-left: 15px;
+        }
+      }
+    }
+
+    p{
+      text-align: center;
+      width: 70%;
+      margin: auto;
     }
   }
 }
 
 /* GRID TILES */
-.lw-grid {
+$tile-normal-width: 20%;
+
+.lw .tile-grid {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -43,65 +92,91 @@
     flex-wrap: wrap;
     margin: -4px; }
 
+    a{
+      text-decoration: none;
+    }
+
     .tile {
-    -webkit-flex: 1 1 25%;
-    -ms-flex: 1 1 25%;
-    flex: 1 1 25%;
-    padding: 4px;
-    box-sizing: bolwer-box;
-    max-width: 25%; }
+      -webkit-flex: 1 1 $tile-normal-width;
+      -ms-flex: 1 1 $tile-normal-width;
+      flex: 1 1 $tile-normal-width;
+      padding: 4px;
+      box-sizing: border-box;
+      max-width: $tile-normal-width;
+
+      .logo{
+        $logo-size: 125px;
+
+        width: $logo-size;
+        height: $logo-size;
+        line-height: $logo-size;
+
+        display: block;
+        border: 1px solid darken($grey, 50%);
+        padding: 3px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        font-size: 3rem;
+        margin: auto auto 1rem auto;
+
+        &:hover{
+          color: invert(black);
+          background: #4E4C37;
+          border-color: transparent;
+        }
+      }
+    }
 
     .tile-content {
-    position: relative;
-    width: 100%;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-align-items: flex-end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 250px;
-    box-sizing: bolwer-box;
-    text-align: center;
-    font-size: 14px;
-    transition: background-color 300ms ease-in;
-    text-decoration: none; }
+      position: relative;
+      width: 100%;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 250px;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 14px;
+      transition: background-color 300ms ease-in;
+      text-decoration: none;
+    }
 
     .tile-content * {
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%; }
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+    }
 
     .title {
-    font-weight: 500;
-    max-width: 400px;
-    box-sizing: bolwer-box;
-    padding: 0 15px 30px 7px; }
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 600;
+      max-width: 400px;
+      box-sizing: border-box;
+      margin: auto auto 0.5rem auto;
+    }
 
     .description {
-    z-index: 2;
-    opacity: 0.8;
-    background: #E9E7E8;
-    box-sizing: bolwer-box;
-    max-width: 100%;
-    margin-bottom: 0;
-    text-align: left;
-    padding: 7px;
-    -webkit-align-self: flex-end;
-    -ms-flex-item-align: end;
-    align-self: flex-end; }
-
-    .large-tile {
-    -webkit-flex: 1 1 50%;
-    -ms-flex: 1 1 50%;
-    flex: 1 1 50%;
-    max-width: 50%; }
+      color: $grey;
+      box-sizing: border-box;
+      max-width: 100%;
+      margin-bottom: 0;
+      text-align: left;
+      padding: 7px;
+      -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+      align-self: flex-end;
+    }
 
 @media (min-width: 626px) and (max-width: 900px) {
     .lw-grid .tile {

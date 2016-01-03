@@ -1,29 +1,60 @@
-.lw-grid {
+body {
+  margin: 0;
+  padding: 0; }
+
+.lw {
   font-family: 'Open Sans'; }
-  .lw-grid header {
+  .lw header {
     background-image: url("img/bg.jpg");
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
-    font-weight: 300; }
-    .lw-grid header h1 {
+    font-weight: 300;
+    padding: 3rem; }
+    .lw header h1 {
       text-transform: uppercase;
       font-weight: 300;
       font-size: 3rem;
       margin: 0.1em 0; }
-    .lw-grid header p {
+    .lw header p {
       font-size: 1.3rem;
       max-width: 47%; }
-  .lw-grid section h2,
-  .lw-grid section h3 {
-    font-weight: 500;
-    text-align: center; }
-  .lw-grid section h2 {
-    font-size: 1.5rem; }
+  .lw section h2,
+  .lw section h3 {
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase; }
+  .lw section h2 {
+    font-size: 1.35rem; }
+  .lw section.issues {
+    margin-bottom: 2rem; }
+    .lw section.issues h2 {
+      margin: 3rem auto 1rem auto;
+      line-height: 0.25;
+      text-align: center; }
+      .lw section.issues h2 span {
+        display: inline-block;
+        position: relative; }
+        .lw section.issues h2 span:before, .lw section.issues h2 span:after {
+          content: "";
+          position: absolute;
+          border-bottom: 2px solid black;
+          top: 0;
+          width: 140%; }
+        .lw section.issues h2 span:before {
+          right: 100%;
+          margin-right: 15px; }
+        .lw section.issues h2 span:after {
+          left: 100%;
+          margin-left: 15px; }
+    .lw section.issues p {
+      text-align: center;
+      width: 70%;
+      margin: auto; }
 
 /* GRID TILES */
-.lw-grid {
+.lw .tile-grid {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -32,13 +63,32 @@
   flex-wrap: wrap;
   margin: -4px; }
 
+a {
+  text-decoration: none; }
+
 .tile {
-  -webkit-flex: 1 1 25%;
-  -ms-flex: 1 1 25%;
-  flex: 1 1 25%;
+  -webkit-flex: 1 1 20%;
+  -ms-flex: 1 1 20%;
+  flex: 1 1 20%;
   padding: 4px;
-  box-sizing: bolwer-box;
-  max-width: 25%; }
+  box-sizing: border-box;
+  max-width: 20%; }
+  .tile .logo {
+    width: 125px;
+    height: 125px;
+    line-height: 125px;
+    display: block;
+    border: 1px solid #090909;
+    padding: 3px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    font-size: 3rem;
+    margin: auto auto 1rem auto; }
+    .tile .logo:hover {
+      color: white;
+      background: #4E4C37;
+      border-color: transparent; }
 
 .tile-content {
   position: relative;
@@ -56,7 +106,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   height: 250px;
-  box-sizing: bolwer-box;
+  box-sizing: border-box;
   text-align: center;
   font-size: 14px;
   transition: background-color 300ms ease-in;
@@ -68,16 +118,16 @@
   flex: 0 0 100%; }
 
 .title {
-  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
   max-width: 400px;
-  box-sizing: bolwer-box;
-  padding: 0 15px 30px 7px; }
+  box-sizing: border-box;
+  margin: auto auto 0.5rem auto; }
 
 .description {
-  z-index: 2;
-  opacity: 0.8;
-  background: #E9E7E8;
-  box-sizing: bolwer-box;
+  color: #888;
+  box-sizing: border-box;
   max-width: 100%;
   margin-bottom: 0;
   text-align: left;
@@ -85,12 +135,6 @@
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end; }
-
-.large-tile {
-  -webkit-flex: 1 1 50%;
-  -ms-flex: 1 1 50%;
-  flex: 1 1 50%;
-  max-width: 50%; }
 
 @media (min-width: 626px) and (max-width: 900px) {
   .lw-grid .tile {

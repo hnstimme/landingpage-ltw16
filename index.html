@@ -8,34 +8,34 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <link rel="stylesheet" href="main.css">
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,500' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <div class="lw-grid">
+    <div class="lw">
       <header>
-        <ul>
-          <li>WhatsApp</li>
-          <li>Facebook</li>
-          <li>Twitter</li>
-        </ul>
+        <a href="whatsapp://send" data-text="Schau dir mal diese Website an: " data-href="" class="wa_btn wa_btn_m" style="display:none">WhatsApp</a>
         <p>Irgendein Text</p>
         <h1>Landtagswahl</h1>
         <p>Ausführliche Vorbericht- und Berichterstattung zur Landtagswahl 2016 in Baden Württemberg am 13. März 2016</p>
       </header>
 
-      <section>
-        <h2>Unsere Themen</h2>
-        <p> Dieser Blindtext wird gerade durch 130 Millionen Rezeptoren Ihrer Netzhaut erfasst. Die Zellen werden dadurch in einen Erregungszustand versetzt, der sich über den Sehnerv in dem hinteren Teil Ihres Gehirns ausbreitet. Von dort aus überträgt sich die Erregung in Sekunden-bruchteilen auch in andere Bereiche Ihres Grosshirns.</p>
+      <section class="issues">
+        <h2><span>Unsere Themen</span></h2>
+        <p>Dieser Blindtext wird gerade durch 130 Millionen Rezeptoren Ihrer Netzhaut erfasst. Die Zellen werden dadurch in einen Erregungszustand versetzt, der sich über den Sehnerv in dem hinteren Teil Ihres Gehirns ausbreitet. Von dort aus überträgt sich die Erregung in Sekunden-bruchteilen auch in andere Bereiche Ihres Grosshirns.</p>
+      </section>
 
+      <section>
         <h3>Wahlkreise der Region</h3>
-        <div class="tile-wrapper">
-          <div class="tile"><div class="logo">Kreis</div><span class="title">Eppingen</span><span class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</span></div>
-          <div class="tile"><div class="logo">Kreis</div><span class="title">Heilbronn</span><span class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</span></div>
-          <div class="tile"><div class="logo">Kreis</div><span class="title">Neckarsulm</span><span class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</span></div>
-          <div class="tile"><div class="logo">Kreis</div><span class="title">Hohenlohe</span><span class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</span></div>
-          <div class="tile"><div class="logo">Kreis</div><span class="title">Suche</span><span class="description">Finden sie heraus, in welchem Wahlkreis ihre Gemeinde ist</span></div>
+        <div class="tile-grid">
+          <div class="tile"><a class="logo" href="">EP</a><div class="title">Eppingen</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
+          <div class="tile"><a class="logo" href="">HN</a><div class="title">Heilbronn</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
+          <div class="tile"><a class="logo" href="">NSU</a><div class="title">Neckarsulm</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
+          <div class="tile"><a class="logo" href="">HOH</a><div class="title">Hohenlohe</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
+          <div class="tile"><a class="logo" href=""><img src="img/suche.svg" alt="Such-Symbol"></a><div class="title">Suche</div><div class="description">Finden sie heraus, in welchem Wahlkreis ihre Gemeinde ist</div></div>
         </div>
       </section>
     </div>
+
+    <script type="text/javascript">if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="whatsapp-button.js";h.appendChild(s);}</script>
   </body>
 </html>
