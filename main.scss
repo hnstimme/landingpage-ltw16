@@ -4,6 +4,7 @@ body{
 }
 
 $grey: #888;
+$complementary: #83bbd6;
 $bg-url: 'img/bg.jpg';
 
 .lw{
@@ -41,14 +42,19 @@ $bg-url: 'img/bg.jpg';
       text-transform: uppercase;
       font-weight: 300;
       font-size: 3rem;
-      margin: 0;
+      margin: 3rem 0;
 
       @media screen and (min-width: 801px) and (max-width: 900px) {
         font-size: 2rem;
+        margin: 2rem 0;
       }
       @media screen and (max-width: 800px) {
         font-size: 1.5rem;
         font-weight: 600;
+        margin: 2rem 0;
+      }
+      @media screen and (max-width: 625px) {
+        margin: 1rem 0;
       }
       @media screen and (max-width: 460px) {
         background-image: url($bg-url);
@@ -56,6 +62,7 @@ $bg-url: 'img/bg.jpg';
         background-repeat: no-repeat;
         background-size: 100%;
 
+        margin: 0;
         padding: 1rem;
         box-sizing: border-box;
         text-shadow: 0px 0px 10px white;
@@ -117,10 +124,13 @@ $bg-url: 'img/bg.jpg';
         &:after {
           content: "";
           position: absolute;
-          border-bottom: 2px solid black;
+          border-bottom: 1px solid black;
           top: 0;
-          width: 140%;
+          width: 175%;
 
+          @media screen and (max-width: 900px) {
+            width: 150%;
+          }
           @media screen and (max-width: 801px) {
             width: 100%;
           }
@@ -178,7 +188,14 @@ $tile-normal-width: 20%;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: -4px; }
+
+    width: 70%;
+    margin: auto;
+  }
+
+    @media screen and (max-width: 625px){
+      margin: 0;
+    }
 
     a{
       text-decoration: none;
@@ -194,8 +211,8 @@ $tile-normal-width: 20%;
       max-width: $tile-normal-width;
 
       .logo{
-        $logo-size: 125px;
-        $logo-smaller-size: 100px;
+        $logo-size: 100px;
+        $logo-smaller-size: 85px;
 
         width: $logo-size;
         height: $logo-size;
@@ -207,8 +224,22 @@ $tile-normal-width: 20%;
         text-align: center;
         vertical-align: middle;
         border-radius: 50%;
-        font-size: 3rem;
+        font-size: 2.4rem;
         margin: auto auto 1rem auto;
+
+        &:hover{
+          border-color: $complementary;
+
+          span{
+            background: $complementary;
+            border-color: transparent;
+            color: white;
+          }
+
+          span.search-logo{
+              background-image: url(img/suche-hover.svg);
+          }
+        }
 
         @media screen and (max-width: 900px){
           width: $logo-smaller-size;
@@ -218,38 +249,23 @@ $tile-normal-width: 20%;
         }
 
         span{
-          width: $logo-size - 3px;
-          height: $logo-size - 3px;
-          line-height: $logo-size - 3px;
+          width: $logo-size;
+          height: $logo-size;
           border-radius: 50%;
           display: inline-block;
 
-          &:hover{
-            color: invert(black);
-            background: #4E4C37;
-            border-color: transparent;
-          }
-
           @media screen and (max-width: 900px){
-            width: $logo-smaller-size - 3px;
-            height: $logo-smaller-size - 3px;
-            line-height: $logo-smaller-size - 3px;
+            width: $logo-smaller-size;
+            height: $logo-smaller-size;
+            line-height: $logo-smaller-size;
           }
         }
 
-        img{
-          $svg-size:70px;
-
-          width: $svg-size;
-          height: $svg-size;
-          vertical-align: sub;
-
-          @media screen and (max-width: 900px){
-            $svg-size:50px;
-
-            width: $svg-size;
-            height: $svg-size;
-          }
+        span.search-logo{
+          background-image: url(img/suche.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 55%;
         }
       }
     }
@@ -260,7 +276,7 @@ $tile-normal-width: 20%;
       font-weight: 600;
       max-width: 400px;
       box-sizing: border-box;
-      margin: auto auto 0.5rem auto;
+      margin: auto auto 0.3rem auto;
       font-size: 1rem;
     }
 
@@ -268,7 +284,6 @@ $tile-normal-width: 20%;
       color: $grey;
       box-sizing: border-box;
       text-align: center;
-      padding: 7px;
 
       @media screen and (max-width: 350px){
         width: 70%;
