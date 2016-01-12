@@ -1,0 +1,111 @@
+{
+  "Heilbronner Landkreis": [
+    { "ort": "Heilbronn",
+      "wahlkreis": 18
+    },
+    {
+      "ort": "Flein",
+      "wahlkreis": 18
+    },
+    {
+      "ort": "Talheim",
+      "wahlkreis": 18
+    },
+    {
+      "ort": "Nordheim",
+      "wahlkreis": 18
+    },
+    {
+      "ort": "Eppingen",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Abstatt",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Bad Rappenau",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Beilstein",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Brackenheim",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Cleebronn",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Gemmingen",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Güglingen",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Ilsfeld",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Ittlingen",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Kirchhardt",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Lauffen am Neckar",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Massenbachhausen",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Neckarwestheim",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Pfaffenhofen",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Schwaigern",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Siegelsbach",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Untergruppenbach",
+      "wahlkreis": 19
+    },
+    {
+      "ort": "Zaberfeld",
+      "wahlkreis": 19
+    }],
+  "Hohenloher Landkreis": [
+    {
+      "ort": "Öhringen",
+      "wahlkreis": "21"
+    },
+    {
+      "ort": "Bieringen",
+      "wahlkreis": "21"
+    },
+    {
+      "ort": "Schöntal",
+      "wahlkreis": "21"
+    },
+    {
+      "ort": "Berlichingen",
+      "wahlkreis": "21"
+    }]
+}

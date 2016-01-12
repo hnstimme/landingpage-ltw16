@@ -8,6 +8,10 @@
 
       <link rel="stylesheet" href="main.css">
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="jquery.typeahead.min.css">
+
+      <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+      <script src="js/jquery.typeahead.min.js"></script>
   </head>
   <body>
     <div class="lw">
@@ -24,11 +28,26 @@
       <section>
         <h3>Wahlkreise der Region</h3>
         <div class="tile-grid">
-          <div class="tile"><a class="logo" href=""><span>EP</span></a><div class="title">Eppingen</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
-          <div class="tile"><a class="logo" href=""><span>HN</span></a><div class="title">Heilbronn</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
-          <div class="tile"><a class="logo" href=""><span>NSU</span></a><div class="title">Neckarsulm</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
-          <div class="tile"><a class="logo" href=""><span>HOH</span></a><div class="title">Hohenlohe</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
-          <div class="tile"><a class="logo" href="/suche"><span class="search-logo" alt="Suche" title="Suche"></span></a><div class="title">Suche</div><div class="description">Finden sie heraus, in welchem Wahlkreis ihre Gemeinde ist</div></div>
+          <div class="tile"><a class="logo" href="" id="wk-19"><span>EP</span></a><div class="title">Eppingen</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
+          <div class="tile"><a class="logo" href="" id="wk-18"><span>HN</span></a><div class="title">Heilbronn</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
+          <div class="tile"><a class="logo" href="" id="wk-20"><span>NSU</span></a><div class="title">Neckarsulm</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
+          <div class="tile"><a class="logo" href="" id="wk-21"><span>HOH</span></a><div class="title">Hohenlohe</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
+          <div class="tile search"><span class="logo" href=""><span class="search-logo" alt="Suche" title="Suche"></span>
+          <form id="wahlkreis-suche-wrapper" style="display: none;">
+            <div class="typeahead-container">
+              <div class="typeahead-field">
+                <span class="typeahead-query">
+                  <input autofocus autocomplete="off" id="wahlkreis-suche" placeholder="Ort eingeben" name="ort" type="search" class="search-field">
+                </span>
+                <!--<span class="typeahead-button">
+                    <button type="submit">
+                        <i class="typeahead-search-icon"></i>
+                    </button>
+                </span>-->
+              </div>
+            </div>
+          </form>
+        </span><div class="title">Suche</div><div class="description">Finden sie heraus, in welchem Wahlkreis ihre Gemeinde ist</div></div>
         </div>
       </section>
 
@@ -37,6 +56,70 @@
       </div>
     </div>
 
-    <script type="text/javascript">if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="whatsapp-button.js";h.appendChild(s);}</script>
+
+    <script>
+    $("#wahlkreis-suche").typeahead({
+      minLength: 2,
+      maxItem: 12,
+      maxItemPerGroup: 5,
+      hint: true,
+      order: "asc",
+      group: [true, "{{group}}"],
+      display: ["ort"],
+      template: "{{ort}}",
+      mustSelectItem: "true",
+      cache: false,
+      source: {
+              "Heilbronner Landkreis": {
+                url: ["js/wahlkreise.json", "Heilbronner Landkreis"]
+              },
+              "Hohenloher Landkreis": {
+                url: ["js/wahlkreise.json", "Hohenloher Landkreis"]
+              }
+          },
+      callback: {
+          onInit: function (node) {
+              console.log('Typeahead Initiated on ' + node.selector);
+          },
+          onClick: function(node, form, item, event){
+            wahlkreis=item.wahlkreis;
+            console.log('Search string: '+item.ort + ' / Wahlkreis: ' + wahlkreis);
+
+            if($(wahlkreis).length > 0){
+              console.log("should glowing")
+              $("#wk-"+wahlkreis+" span").addClass("glow");
+              console.log("#wk-"+wahlkreis+" span");
+            }
+          },
+          /*onSearch: function(node, query){
+            $("#wk-"+wahlkreis).removeClass("glow");
+          }*/
+      },
+      debug: true
+    });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $(".search .logo").click(function(e){
+        e.stopPropagation();
+
+        $(".search .logo .search-logo").hide();
+        $(".search .logo form#wahlkreis-suche-wrapper").show();
+        $(".search .logo #wahlkreis-suche").focus();
+      });
+      $(document).click(function(e){
+        var target = e.target;
+
+        if(!$(target).is(".search")){
+          if($(".search .logo form#wahlkreis-suche-wrapper").is(":visible")){
+            $(".search .logo form#wahlkreis-suche-wrapper").hide();
+            $(".search .logo .search-logo").show();
+          }
+        }
+      });
+    })
+    </script>
+    <script type="text/javascript">if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="whatsapp-button.js";h.appendChild(s);}
+    </script>
   </body>
 </html>
