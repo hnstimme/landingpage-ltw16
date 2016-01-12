@@ -5,7 +5,7 @@ body{
 
 $grey: #888;
 $complementary: #83bbd6;
-$bg-url: 'img/bg.jpg';
+$bg-url: '../img/bg.jpg';
 
 .lw{
   font-family: 'Open Sans';
@@ -42,11 +42,10 @@ $bg-url: 'img/bg.jpg';
       text-transform: uppercase;
       font-weight: 300;
       font-size: 3rem;
-      margin: 3rem 0;
+      margin: 2rem 0;
 
       @media screen and (min-width: 801px) and (max-width: 900px) {
         font-size: 2rem;
-        margin: 2rem 0;
       }
       @media screen and (max-width: 800px) {
         font-size: 1.5rem;
@@ -174,8 +173,22 @@ $bg-url: 'img/bg.jpg';
 }
 
 .sharing-container{
-  text-align: center;
-  margin-top: 1rem;
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li{
+        display: inline;
+        margin: 0 0.2rem;
+
+        img{
+          $icon_size: 30px;
+          width: $icon_size;
+          height: $icon_size;
+        }
+    }
+  }
 }
 
 /* GRID TILES */
@@ -237,7 +250,7 @@ $tile-normal-width: 20%;
           }
 
           > span.search-logo{
-              background-image: url(img/suche-hover.svg);
+              background-image: url("../img/suche-hover.svg");
           }
         }
 
@@ -262,10 +275,11 @@ $tile-normal-width: 20%;
         }
 
         > span.search-logo{
-          background-image: url(img/suche.svg);
+          background-image: url("../img/suche.svg");
           background-repeat: no-repeat;
           background-position: center;
           background-size: 55%;
+          cursor: pointer;
         }
 
         #wahlkreis-suche-wrapper{
