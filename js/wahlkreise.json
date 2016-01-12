@@ -1,10 +1,14 @@
 {
-  "Heilbronner Landkreis": [
+  "data": [
     { "ort": "Heilbronn",
       "wahlkreis": 18
     },
     {
       "ort": "Flein",
+      "wahlkreis": 18
+    },
+    {
+      "ort": "Leingarten",
       "wahlkreis": 18
     },
     {
@@ -90,22 +94,201 @@
     {
       "ort": "Zaberfeld",
       "wahlkreis": 19
-    }],
-  "Hohenloher Landkreis": [
-    {
-      "ort": "Öhringen",
-      "wahlkreis": "21"
     },
     {
-      "ort": "Bieringen",
-      "wahlkreis": "21"
+      "ort": "Jagsthausen",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Olnhausen",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Bad Friedrichshall",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Bad Wimpfen",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Eberstadt",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Ellhofen",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Erlenbach",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Gundelsheim",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Hardthausen am Kocher",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Langenbrettach",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Langenbeutingen",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Brettach",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Lehrensteinsfeld",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Löwenstein",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Möckmühl",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Neudenau",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Neuenstadt am Kocher",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Obersulm",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Oedheim",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Offenau",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Roigheim",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Untereisesheim",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Weinsberg",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Widdern",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Wüstenrot",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Neckarsulm",
+      "wahlkreis": 20
+    },
+    {
+      "ort": "Öhringen",
+      "wahlkreis": 21
     },
     {
       "ort": "Schöntal",
-      "wahlkreis": "21"
+      "wahlkreis": 21
     },
     {
-      "ort": "Berlichingen",
-      "wahlkreis": "21"
+      "ort": "Blaufelden",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Braunsbach",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Gerabronn",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Langenburg",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Schrozberg",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Untermünkheim",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Bieringen",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Forchtenberg",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Bretzfeld",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Dörzbach",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Ingelfingen",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Krautheim",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Künzelsau",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Kupferzell",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Mulfingen",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Neuenstein",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Niedernhall",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Pfedelbach",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Waldenburg",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Weißbach",
+      "wahlkreis": 21
+    },
+    {
+      "ort": "Zweiflingen",
+      "wahlkreis": 21
     }]
 }

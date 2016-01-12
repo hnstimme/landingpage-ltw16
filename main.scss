@@ -268,23 +268,32 @@ $tile-normal-width: 20%;
           background-size: 55%;
         }
 
+        #wahlkreis-suche-wrapper{
+          width: 97%;
+        }
+
         input.search-field{
-          vertical-align: inherit;
-          width: 100%;
-          box-sizing: border-box;
           line-height: 1.2rem;
+          padding: 0;
         }
       }
       .glow{
         animation-name: glowing;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
+        animation-duration: 0.3s;
+        animation-iteration-count: 1;
         animation-timing-function: ease-in-out;
+        background: $complementary;
+        color: white;
       }
       @keyframes glowing{
-        0% {background: white;}
-        50% {background: $complementary;}
-        100% {background: white;}
+        from {
+          background: white;
+          color: black;
+        }
+        to {
+          background: $complementary;
+          color: white;
+        }
       }
     }
 

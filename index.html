@@ -60,40 +60,29 @@
     <script>
     $("#wahlkreis-suche").typeahead({
       minLength: 2,
-      maxItem: 12,
-      maxItemPerGroup: 5,
+      maxItem: 6,
       hint: true,
       order: "asc",
-      group: [true, "{{group}}"],
       display: ["ort"],
       template: "{{ort}}",
       mustSelectItem: "true",
       cache: false,
-      source: {
-              "Heilbronner Landkreis": {
-                url: ["js/wahlkreise.json", "Heilbronner Landkreis"]
-              },
-              "Hohenloher Landkreis": {
-                url: ["js/wahlkreise.json", "Hohenloher Landkreis"]
-              }
-          },
+      source: {url: ["js/wahlkreise.json", "data"]},
       callback: {
           onInit: function (node) {
               console.log('Typeahead Initiated on ' + node.selector);
           },
           onClick: function(node, form, item, event){
+            if(typeof(wahlkreis) != "undefined" && wahlkreis !== null){
+              $("#wk-"+wahlkreis+" span").removeClass("glow");
+            }
             wahlkreis=item.wahlkreis;
             console.log('Search string: '+item.ort + ' / Wahlkreis: ' + wahlkreis);
 
-            if($(wahlkreis).length > 0){
-              console.log("should glowing")
-              $("#wk-"+wahlkreis+" span").addClass("glow");
-              console.log("#wk-"+wahlkreis+" span");
-            }
-          },
-          /*onSearch: function(node, query){
-            $("#wk-"+wahlkreis).removeClass("glow");
-          }*/
+            console.log("should glowing")
+            $("#wk-"+wahlkreis+" span").addClass("glow");
+            console.log("#wk-"+wahlkreis+" span");
+          }
       },
       debug: true
     });
@@ -104,7 +93,7 @@
         e.stopPropagation();
 
         $(".search .logo .search-logo").hide();
-        $(".search .logo form#wahlkreis-suche-wrapper").show();
+        $(".search .logo #wahlkreis-suche-wrapper").css("display", "inline-block");
         $(".search .logo #wahlkreis-suche").focus();
       });
       $(document).click(function(e){
@@ -114,6 +103,7 @@
           if($(".search .logo form#wahlkreis-suche-wrapper").is(":visible")){
             $(".search .logo form#wahlkreis-suche-wrapper").hide();
             $(".search .logo .search-logo").show();
+            $(".glow").removeClass("glow");
           }
         }
       });
