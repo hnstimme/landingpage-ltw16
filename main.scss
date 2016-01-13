@@ -2,10 +2,23 @@ body{
   margin: 0;
   padding: 0;
 }
+.show-on-mobile{
+  display: none;
+
+  @media screen and (max-width: 460px){
+    display: block;
+  }
+}
+.hide-on-mobile{
+  @media screen and (max-width: 460px){
+    display: none;
+  }
+}
 
 $grey: #888;
 $complementary: #83bbd6;
 $bg-url: '../img/bg.jpg';
+$bg-mobile-url: '../img/bg-mobil.jpg';
 
 .lw{
   font-family: 'Open Sans';
@@ -18,24 +31,26 @@ $bg-url: '../img/bg.jpg';
     background-size: 100%;
     width: 100%;
     font-weight: 300;
-    padding: 4.5rem 2rem;
+    padding: 0 2rem 3rem 2rem;
     box-sizing: border-box;
 
     @media screen and (max-width: 900px) {
-      padding: 4rem 1.5rem;
+      padding: 0 1.5rem 4vw 1.5rem;
     }
     @media screen and (max-width: 800px) {
-      padding: 3rem 2rem;
+      padding: 3vw 2rem;
     }
     @media screen and (max-width: 715px) {
-      padding: 1.5rem 2rem;
+      padding: 2vw 2rem;
+      background-size: cover;
     }
     @media screen and (max-width: 625px) {
-      padding: 1rem 1.5rem;
+      padding: 5vw 1.5rem;
     }
     @media screen and (max-width: 460px) {
-      background-image: none;
       padding: 0;
+      background-image: url($bg-mobile-url);
+      background-position: center 100%;
     }
 
     h1{
@@ -43,6 +58,7 @@ $bg-url: '../img/bg.jpg';
       font-weight: 300;
       font-size: 3rem;
       margin: 2rem 0;
+      text-shadow: 0px 0px 6px white;
 
       @media screen and (min-width: 801px) and (max-width: 900px) {
         font-size: 2rem;
@@ -53,21 +69,18 @@ $bg-url: '../img/bg.jpg';
         margin: 2rem 0;
       }
       @media screen and (max-width: 625px) {
-        margin: 1rem 0;
+        margin: 0.6rem 0;
       }
       @media screen and (max-width: 460px) {
-        background-image: url($bg-url);
-        background-position: center 0%;
-        background-repeat: no-repeat;
-        background-size: 100%;
-
-        margin: 0;
-        padding: 1rem;
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin-bottom: 0;
         box-sizing: border-box;
-        text-shadow: 0px 0px 10px white;
         text-align: center !important;
       }
-
+      @media screen and (max-width: 350px) {
+        font-size: 2rem;
+      }
     }
 
     p{
@@ -79,15 +92,29 @@ $bg-url: '../img/bg.jpg';
         font-size: 1rem;
       }
       @media screen and (max-width: 625px) {
-        margin: 0.6em 0;
+        margin: 0 0 0.6em 0;
       }
       @media screen and (max-width: 460px) {
         max-width: 100%;
-        margin: 1rem;
+        padding-bottom: 85vw;
+        margin-bottom: 3rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
+      @media screen and (max-width: 350px) {
+        font-size: 1rem;
       }
     }
   }
   section{
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 625px){
+      margin-bottom: 1rem;
+    }
+
     h2,
     h3{
       font-weight: 600;
@@ -100,12 +127,6 @@ $bg-url: '../img/bg.jpg';
   }
 
   section.issues{
-    margin-bottom: 2rem;
-
-    @media screen and (max-width: 625px){
-      margin-bottom: 1rem;
-    }
-
     h2{
       margin: 3rem auto 1rem auto;
       line-height: 0.25;
@@ -173,6 +194,32 @@ $bg-url: '../img/bg.jpg';
 }
 
 .sharing-container{
+  margin-bottom: 6.5rem;
+  padding-top: 1.4rem;
+
+  @media screen and (max-width: 940px) {
+    margin-bottom: 5.5rem;
+    padding-top: 1rem;
+  }
+  @media screen and (max-width: 900px) {
+    margin-bottom: 6rem;
+    padding-top: 1rem;
+  }
+  @media screen and (max-width: 800px) {
+    margin-bottom: 4rem;
+    padding-top: 1rem;
+  }
+  @media screen and (max-width: 715px) {
+    margin-bottom: 1.5rem;
+    padding-top: 0.5rem;
+  }
+  @media screen and (max-width: 625px) {
+    margin-bottom: 0;
+  }
+  @media screen and (max-width: 460px) {
+    padding-left: 0.5rem;
+  }
+
   ul{
     list-style: none;
     margin: 0;
@@ -237,6 +284,8 @@ $tile-normal-width: 20%;
         text-align: center;
         vertical-align: middle;
         border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
         font-size: 2.4rem;
         margin: auto auto 1rem auto;
 
@@ -280,6 +329,13 @@ $tile-normal-width: 20%;
           background-position: center;
           background-size: 55%;
           cursor: pointer;
+        }
+
+        > .videos{
+          background-image: url("../img/kamera.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 55%;
         }
 
         #wahlkreis-suche-wrapper{
@@ -327,9 +383,7 @@ $tile-normal-width: 20%;
       text-align: center;
 
       @media screen and (max-width: 350px){
-        width: 70%;
-        margin: auto;
-        font-size: 1rem;
+        display: none;
       }
     }
 

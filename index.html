@@ -9,24 +9,23 @@
       <link rel="stylesheet" href="css/main.css">
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="css/jquery.typeahead.min.css">
-      <link rel="stylesheet" href="css/shariff.min.css">
 
       <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
       <script src="js/jquery.typeahead.min.js"></script>
-      <script src="js/shariff.complete.js"></script>
   </head>
   <body>
     <div class="lw">
       <header>
         <div class="sharing-container">
             <ul>
-              <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.stimme.de%2Flandtagswahl2016" target="_blank" ><img src="img/facebook.svg"></a></li>
-              <li><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stimme.de%2Flandtagswahl2016" target="_blank"><img src="img/twitter.svg"></a></li>
-              <li><a href="whatsapp://send?text=Landtagswahl%202016%20http%3A%2F%2Fwww.stimme.de%2Flandtagswahl2016"><img src="img/whatsapp.svg"></a></li>
+              <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.stimme.de%2Fltw2016" target="_blank" ><img src="img/facebook.png"></a></li>
+              <li><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stimme.de%2Fltw2016" target="_blank"><img src="img/twitter.png"></a></li>
+              <li id="whatsapp-sharing" style="display: none;"><a href="whatsapp://send?text=Landtagswahl%202016%20http%3A%2F%2Fwww.stimme.de%2Fltw2016"><img src="img/whatsapp.png"></a></li>
             </ul>
         </div>
         <h1>Landtagswahl</h1>
-        <p>Ausführliche Vorbericht- und Berichterstattung zur Landtagswahl 2016 in Baden Württemberg am 13. März 2016</p>
+        <p class="show-on-mobile">in Baden-Württemberg</p>
+        <p class="hide-on-mobile">Ausführliche Vorbericht- und Berichterstattung zur Landtagswahl 2016 in Baden Württemberg am 13. März 2016</p>
       </header>
 
       <section class="issues">
@@ -37,10 +36,10 @@
       <section>
         <h3>Wahlkreise der Region</h3>
         <div class="tile-grid">
-          <div class="tile"><a class="logo" href="" id="wk-19"><span>EP</span></a><div class="title">Eppingen</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
-          <div class="tile"><a class="logo" href="" id="wk-18"><span>HN</span></a><div class="title">Heilbronn</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
-          <div class="tile"><a class="logo" href="" id="wk-20"><span>NSU</span></a><div class="title">Neckarsulm</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
-          <div class="tile"><a class="logo" href="" id="wk-21"><span>HOH</span></a><div class="title">Hohenlohe</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
+          <div class="tile"><a class="logo" href="http://www.stimme.de/themen/wahlen/landtagswahl2016/eppingen" id="wk-19"><span>EP</span></a><div class="title">Eppingen</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
+          <div class="tile"><a class="logo" href="http://www.stimme.de/themen/wahlen/landtagswahl2016/heilbronn" id="wk-18"><span>HN</span></a><div class="title">Heilbronn</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
+          <div class="tile"><a class="logo" href="http://www.stimme.de/themen/wahlen/landtagswahl2016/neckarsulm" id="wk-20"><span>NSU</span></a><div class="title">Neckarsulm</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
+          <div class="tile"><a class="logo" href="http://www.stimme.de/themen/wahlen/landtagswahl2016/hohenlohe" id="wk-21"><span>HOH</span></a><div class="title">Hohenlohe</div><div class="description">Das ist eine Beispiel Stadt zum testen und ausprobieren</div></div>
           <div class="tile search"><span class="logo" href=""><span class="search-logo" alt="Suche" title="Suche"></span>
           <form id="wahlkreis-suche-wrapper" style="display: none;">
             <div class="typeahead-container">
@@ -58,7 +57,7 @@
       <section>
         <h3>Weitere Themen</h3>
         <div class="tile-grid">
-          <div class="tile"><a class="logo" href=""><span>EP</span></a><div class="title">Videos</div><div class="description">Weitere Themen sind was tolles</div></div>
+          <div class="tile"><a class="logo" href=""><span class="videos"></span></a><div class="title">Videos</div><div class="description">Weitere Themen sind was tolles</div></div>
           <div class="tile"><a class="logo" href=""><span>HN</span></a><div class="title">Kandidaten Tinder</div><div class="description">Weitere Themen sind was tolles</div></div>
           <div class="tile"><a class="logo" href=""><span>NSU</span></a><div class="title">Neckarsulm</div><div class="description">Weitere Themen sind was tolles</div></div>
           <div class="tile"><a class="logo" href=""><span>HOH</span></a><div class="title">Hohenlohe</div><div class="description">Weitere Themen sind was tolles</div></div>
@@ -81,9 +80,6 @@
       cache: false,
       source: {url: ["js/wahlkreise.json", "data"]},
       callback: {
-          onInit: function (node) {
-              console.log('Typeahead Initiated on ' + node.selector);
-          },
           onClick: function(node, form, item, event){
             if(typeof(wahlkreis) != "undefined" && wahlkreis !== null){
               $("#wk-"+wahlkreis+" span").removeClass("glow");
@@ -91,9 +87,12 @@
             wahlkreis=item.wahlkreis;
             console.log('Search string: '+item.ort + ' / Wahlkreis: ' + wahlkreis);
 
-            console.log("should glowing")
             $("#wk-"+wahlkreis+" span").addClass("glow");
-            console.log("#wk-"+wahlkreis+" span");
+            if($(window).width()<900){
+              $("html, body").animate({
+                scrollTop: $("#wk-"+wahlkreis).offset().top
+              }, 300);
+            }
           }
       }
     });
@@ -119,6 +118,11 @@
         }
       });
     })
+    </script>
+    <script>
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      $("#whatsapp-sharing").css("display", "inline");
+    }
     </script>
   </body>
 </html>
