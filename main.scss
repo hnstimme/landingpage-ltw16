@@ -309,6 +309,9 @@ $tile-normal-width: 20%;
           line-height: $logo-smaller-size;
           font-size: 2rem;
         }
+        @media screen and (max-width: 350px){
+          margin: 0 auto 0.5rem auto;
+        }
 
         > span{
           width: $logo-size;
@@ -323,19 +326,24 @@ $tile-normal-width: 20%;
           }
         }
 
-        > span.search-logo{
-          background-image: url("../img/suche.svg");
+        .bg-img{
           background-repeat: no-repeat;
           background-position: center;
           background-size: 55%;
           cursor: pointer;
         }
 
+        > span.search-logo{
+          background-image: url("../img/suche.svg");
+        }
         > .videos{
           background-image: url("../img/kamera.svg");
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 55%;
+        }
+        > .bw{
+          background-image: url("../img/bw.svg");
+        }
+        > .mp{
+          background-image: url("../img/mp.svg");
         }
 
         #wahlkreis-suche-wrapper{
@@ -375,6 +383,10 @@ $tile-normal-width: 20%;
       box-sizing: border-box;
       margin: auto auto 0.3rem auto;
       font-size: 1rem;
+
+      @media screen and (max-width: 350px){
+        margin: 0 auto 1.2rem auto;
+      }
     }
 
     .description {
@@ -402,15 +414,22 @@ $tile-normal-width: 20%;
         -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
         max-width: 50%;
+
+        &:nth-child(odd):last-child{
+          -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+          max-width: 100%;
+        }
       }
     }
 
 @media screen and (max-width: 350px) {
-    .lw .tile-grid .tile {
-        -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-        max-width: 100%;
-        font-size: 12px;
+    .lw .tile-grid{
+      width: 100%;
+
+      .tile {
+          font-size: 12px;
+        }
       }
     }
