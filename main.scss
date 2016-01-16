@@ -2,18 +2,6 @@ body{
   margin: 0;
   padding: 0;
 }
-.show-on-mobile{
-  display: none;
-
-  @media screen and (max-width: 460px){
-    display: block;
-  }
-}
-.hide-on-mobile{
-  @media screen and (max-width: 460px){
-    display: none;
-  }
-}
 
 $grey: #888;
 $complementary: #83bbd6;
@@ -31,21 +19,21 @@ $bg-mobile-url: '../img/bg-mobil.jpg';
     background-size: 100%;
     width: 100%;
     font-weight: 300;
-    padding: 0 2rem 3rem 2rem;
+    padding: 0 2rem 3.5rem 2rem;
     box-sizing: border-box;
 
     @media screen and (max-width: 900px) {
-      padding: 0 1.5rem 4vw 1.5rem;
+      padding: 0 1.5rem 9vw 1.5rem;
     }
     @media screen and (max-width: 800px) {
       padding: 3vw 2rem;
     }
     @media screen and (max-width: 715px) {
-      padding: 2vw 2rem;
+      padding: 4vw 2rem;
       background-size: cover;
     }
     @media screen and (max-width: 625px) {
-      padding: 5vw 1.5rem;
+      padding: 8vw 1.5rem;
     }
     @media screen and (max-width: 460px) {
       padding: 0;
@@ -57,19 +45,19 @@ $bg-mobile-url: '../img/bg-mobil.jpg';
       text-transform: uppercase;
       font-weight: 300;
       font-size: 3rem;
-      margin: 2rem 0;
+      margin: 4rem 0 0 0;
       text-shadow: 0px 0px 6px white;
 
       @media screen and (min-width: 801px) and (max-width: 900px) {
         font-size: 2rem;
       }
       @media screen and (max-width: 800px) {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 600;
-        margin: 2rem 0;
+        margin: 4rem 0 0 0;
       }
       @media screen and (max-width: 625px) {
-        margin: 0.6rem 0;
+        margin: 1.2rem 0 0 0;
       }
       @media screen and (max-width: 460px) {
         font-size: 2.5rem;
@@ -83,10 +71,11 @@ $bg-mobile-url: '../img/bg-mobil.jpg';
       }
     }
 
-    p{
-      font-size: 1.3rem;
+    h2{
+      font-size: 1.5rem;
       max-width: 47%;
-      margin: 1.5em 0;
+      margin: 0 0 3em 0;
+      font-weight: 300;
 
       @media screen and (max-width: 900px) {
         font-size: 1rem;
@@ -248,14 +237,10 @@ $tile-normal-width: 20%;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    justify-content: center;
 
     width: 70%;
     margin: auto;
-  }
-
-    @media screen and (max-width: 625px){
-      margin: 0;
-    }
 
     a{
       text-decoration: none;
@@ -297,10 +282,6 @@ $tile-normal-width: 20%;
             border-color: transparent;
             color: white;
           }
-
-          > span.search-logo{
-              background-image: url("../img/suche-hover.svg");
-          }
         }
 
         @media screen and (max-width: 900px){
@@ -326,24 +307,45 @@ $tile-normal-width: 20%;
           }
         }
 
-        .bg-img{
+        &.icon > span{
           background-repeat: no-repeat;
           background-position: center;
-          background-size: 55%;
           cursor: pointer;
         }
 
-        > span.search-logo{
+        > .search-logo{
           background-image: url("../img/suche.svg");
+          background-size: 55%;
         }
-        > .videos{
+        > .election{
           background-image: url("../img/kamera.svg");
+          background-size: 55%;
         }
         > .bw{
           background-image: url("../img/bw.svg");
+          background-size: 65%;
         }
         > .mp{
           background-image: url("../img/mp.svg");
+          background-size: 65%;
+        }
+        &:hover{
+          > .search-logo{
+            background-image: url("../img/suche-hover.svg");
+            background-size: 55%;
+          }
+          > .election{
+            background-image: url("../img/kamera-hover.svg");
+            background-size: 55%;
+          }
+          > .bw{
+            background-image: url("../img/bw-hover.svg");
+            background-size: 65%;
+          }
+          > .mp{
+            background-image: url("../img/mp-hover.svg");
+            background-size: 65%;
+          }
         }
 
         #wahlkreis-suche-wrapper{
@@ -398,32 +400,30 @@ $tile-normal-width: 20%;
         display: none;
       }
     }
+}
+
+// Flex Grid
+@mixin flex-size($width) {
+  -webkit-flex-basis: $width;
+  -ms-flex-preferred-size: $width;
+  flex-basis: $width;
+  max-width: $width;
+}
 
 @media screen and (max-width: 900px) {
     .lw .tile-grid .tile {
-        -webkit-flex-basis: 33.3%;
-        -ms-flex-preferred-size: 33.3%;
-        flex-basis: 33.3%;
-        max-width: 33.3%;
+        @include flex-size(33.33%);
       }
     }
-
 @media screen and (max-width: 625px) {
     .lw .tile-grid .tile {
-        -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-        max-width: 50%;
+        @include flex-size(50%);
 
         &:nth-child(odd):last-child{
-          -webkit-flex-basis: 100%;
-          -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-          max-width: 100%;
+          @include flex-size(100%);
         }
       }
     }
-
 @media screen and (max-width: 350px) {
     .lw .tile-grid{
       width: 100%;
