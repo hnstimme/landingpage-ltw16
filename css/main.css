@@ -1,0 +1,334 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.lw {
+  font-family: 'Open Sans';
+  max-width: 990px; }
+  .lw header {
+    background-image: url("../img/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    font-weight: 300;
+    padding: 0 2rem 3.5rem 2rem;
+    box-sizing: border-box; }
+    @media screen and (max-width: 900px) {
+      .lw header {
+        padding: 0 1.5rem 9vw 1.5rem; } }
+    @media screen and (max-width: 800px) {
+      .lw header {
+        padding: 3vw 2rem; } }
+    @media screen and (max-width: 715px) {
+      .lw header {
+        padding: 4vw 2rem;
+        background-size: cover; } }
+    @media screen and (max-width: 625px) {
+      .lw header {
+        padding: 8vw 1.5rem; } }
+    @media screen and (max-width: 460px) {
+      .lw header {
+        padding: 0;
+        background-image: url("../img/bg-mobil.jpg");
+        background-position: center 100%; } }
+    .lw header h1 {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 3rem;
+      margin: 4rem 0 0 0;
+      text-shadow: 0px 0px 6px white; }
+      @media screen and (min-width: 801px) and (max-width: 900px) {
+        .lw header h1 {
+          font-size: 2rem; } }
+      @media screen and (max-width: 800px) {
+        .lw header h1 {
+          font-size: 1.8rem;
+          font-weight: 600;
+          margin: 4rem 0 0 0; } }
+      @media screen and (max-width: 625px) {
+        .lw header h1 {
+          margin: 1.2rem 0 0 0; } }
+      @media screen and (max-width: 460px) {
+        .lw header h1 {
+          font-size: 2.5rem;
+          font-weight: 300;
+          margin-bottom: 0;
+          box-sizing: border-box;
+          text-align: center !important; } }
+      @media screen and (max-width: 350px) {
+        .lw header h1 {
+          font-size: 2rem; } }
+    .lw header h2 {
+      font-size: 1.5rem;
+      max-width: 47%;
+      margin: 0 0 3em 0;
+      font-weight: 300; }
+      @media screen and (max-width: 900px) {
+        .lw header h2 {
+          font-size: 1rem; } }
+      @media screen and (max-width: 625px) {
+        .lw header h2 {
+          margin: 0 0 0.6em 0; } }
+      @media screen and (max-width: 460px) {
+        .lw header h2 {
+          max-width: 100%;
+          padding-bottom: 85vw;
+          margin-bottom: 3rem;
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: 300;
+          font-size: 1.2rem; } }
+      @media screen and (max-width: 350px) {
+        .lw header h2 {
+          font-size: 1rem; } }
+  .lw section {
+    margin-bottom: 2rem; }
+    @media screen and (max-width: 625px) {
+      .lw section {
+        margin-bottom: 1rem; } }
+    .lw section h2,
+    .lw section h3 {
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase; }
+    .lw section h2 {
+      font-size: 1.35rem; }
+  .lw section.issues h2 {
+    margin: 3rem auto 1rem auto;
+    line-height: 0.25;
+    text-align: center; }
+    @media screen and (max-width: 460px) {
+      .lw section.issues h2 {
+        margin: 1.5rem auto 1rem auto; } }
+    .lw section.issues h2 span {
+      display: inline-block;
+      position: relative; }
+      .lw section.issues h2 span:before, .lw section.issues h2 span:after {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid black;
+        top: 0;
+        width: 175%; }
+        @media screen and (max-width: 900px) {
+          .lw section.issues h2 span:before, .lw section.issues h2 span:after {
+            width: 150%; } }
+        @media screen and (max-width: 801px) {
+          .lw section.issues h2 span:before, .lw section.issues h2 span:after {
+            width: 100%; } }
+        @media screen and (max-width: 625px) {
+          .lw section.issues h2 span:before, .lw section.issues h2 span:after {
+            width: 70%; } }
+        @media screen and (max-width: 500px) {
+          .lw section.issues h2 span:before, .lw section.issues h2 span:after {
+            width: 40%; } }
+        @media (max-width: 350px) {
+          .lw section.issues h2 span:before, .lw section.issues h2 span:after {
+            width: 20%; } }
+      .lw section.issues h2 span:before {
+        right: 100%;
+        margin-right: 15px; }
+      .lw section.issues h2 span:after {
+        left: 100%;
+        margin-left: 15px; }
+  .lw section.issues p {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    padding: 1rem;
+    box-sizing: border-box; }
+    @media screen and (max-width: 625px) {
+      .lw section.issues p {
+        width: 100%; } }
+    @media screen and (max-width: 460px) {
+      .lw section.issues p {
+        text-align: left;
+        padding: 0 1rem; } }
+
+.sharing-container {
+  margin-bottom: 6.5rem;
+  padding-top: 1.4rem; }
+  @media screen and (max-width: 940px) {
+    .sharing-container {
+      margin-bottom: 5.5rem;
+      padding-top: 1rem; } }
+  @media screen and (max-width: 900px) {
+    .sharing-container {
+      margin-bottom: 6rem;
+      padding-top: 1rem; } }
+  @media screen and (max-width: 800px) {
+    .sharing-container {
+      margin-bottom: 4rem;
+      padding-top: 1rem; } }
+  @media screen and (max-width: 715px) {
+    .sharing-container {
+      margin-bottom: 1.5rem;
+      padding-top: 0.5rem; } }
+  @media screen and (max-width: 625px) {
+    .sharing-container {
+      margin-bottom: 0; } }
+  @media screen and (max-width: 460px) {
+    .sharing-container {
+      padding-left: 0.5rem; } }
+  .sharing-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .sharing-container ul li {
+      display: inline;
+      margin: 0 0.2rem; }
+      .sharing-container ul li img {
+        width: 30px;
+        height: 30px; }
+
+/* GRID TILES */
+.lw .tile-grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70%;
+  margin: auto; }
+  .lw .tile-grid a {
+    text-decoration: none;
+    color: black; }
+  .lw .tile-grid .tile {
+    -webkit-flex: 1 1 20%;
+    -ms-flex: 1 1 20%;
+    flex: 1 1 20%;
+    padding: 4px;
+    box-sizing: border-box;
+    max-width: 20%; }
+    .lw .tile-grid .tile .logo {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      display: block;
+      border: 1px solid #090909;
+      padding: 3px;
+      text-align: center;
+      vertical-align: middle;
+      border-radius: 50%;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      font-size: 2.4rem;
+      margin: auto auto 1rem auto; }
+      .lw .tile-grid .tile .logo:hover {
+        border-color: #83bbd6; }
+        .lw .tile-grid .tile .logo:hover > span {
+          background: #83bbd6;
+          border-color: transparent;
+          color: white; }
+      @media screen and (max-width: 900px) {
+        .lw .tile-grid .tile .logo {
+          width: 85px;
+          height: 85px;
+          line-height: 85px;
+          font-size: 2rem; } }
+      @media screen and (max-width: 350px) {
+        .lw .tile-grid .tile .logo {
+          margin: 0 auto 0.5rem auto; } }
+      .lw .tile-grid .tile .logo > span {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: inline-block; }
+        @media screen and (max-width: 900px) {
+          .lw .tile-grid .tile .logo > span {
+            width: 85px;
+            height: 85px;
+            line-height: 85px; } }
+      .lw .tile-grid .tile .logo.icon > span {
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer; }
+      .lw .tile-grid .tile .logo > .search-logo {
+        background-image: url("../img/suche.svg");
+        background-size: 55%; }
+      .lw .tile-grid .tile .logo > .election {
+        background-image: url("../img/kamera.svg");
+        background-size: 55%; }
+      .lw .tile-grid .tile .logo > .bw {
+        background-image: url("../img/bw.svg");
+        background-size: 65%; }
+      .lw .tile-grid .tile .logo > .mp {
+        background-image: url("../img/mp.svg");
+        background-size: 65%; }
+      .lw .tile-grid .tile .logo:hover > .search-logo {
+        background-image: url("../img/suche-hover.svg");
+        background-size: 55%; }
+      .lw .tile-grid .tile .logo:hover > .election {
+        background-image: url("../img/kamera-hover.svg");
+        background-size: 55%; }
+      .lw .tile-grid .tile .logo:hover > .bw {
+        background-image: url("../img/bw-hover.svg");
+        background-size: 65%; }
+      .lw .tile-grid .tile .logo:hover > .mp {
+        background-image: url("../img/mp-hover.svg");
+        background-size: 65%; }
+      .lw .tile-grid .tile .logo #wahlkreis-suche-wrapper {
+        width: 97%; }
+      .lw .tile-grid .tile .logo input.search-field {
+        line-height: 1.2rem;
+        padding: 0; }
+    .lw .tile-grid .tile .glow {
+      animation-name: glowing;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+      background: #83bbd6;
+      color: white; }
+
+@keyframes glowing {
+  from {
+    background: white;
+    color: black; }
+  to {
+    background: #83bbd6;
+    color: white; } }
+  .lw .tile-grid .title {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: auto auto 0.3rem auto;
+    font-size: 1rem; }
+    @media screen and (max-width: 350px) {
+      .lw .tile-grid .title {
+        margin: 0 auto 1.2rem auto; } }
+  .lw .tile-grid .description {
+    color: #888;
+    box-sizing: border-box;
+    text-align: center; }
+    @media screen and (max-width: 350px) {
+      .lw .tile-grid .description {
+        display: none; } }
+
+@media screen and (max-width: 900px) {
+  .lw .tile-grid .tile {
+    -webkit-flex-basis: 33.33%;
+    -ms-flex-preferred-size: 33.33%;
+    flex-basis: 33.33%;
+    max-width: 33.33%; } }
+
+@media screen and (max-width: 625px) {
+  .lw .tile-grid .tile {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%; }
+    .lw .tile-grid .tile:nth-child(odd):last-child {
+      -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      max-width: 100%; } }
+
+@media screen and (max-width: 350px) {
+  .lw .tile-grid {
+    width: 100%; }
+    .lw .tile-grid .tile {
+      font-size: 12px; } }

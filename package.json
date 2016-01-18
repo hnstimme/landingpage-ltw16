@@ -1,0 +1,23 @@
+{
+  "name": "landtagswahl-landingpage",
+  "version": "1.0",
+  "description": "Landingpage for Landtagswahl for Heilbronner Stimme",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-sass": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/ohrie/landtagswahl-landingpage.git"
+  },
+  "author": "ohrie",
+  "license": "Copyright",
+  "bugs": {
+    "url": "https://gitlab.com/ohrie/landtagswahl-landingpage/issues"
+  },
+  "homepage": "https://gitlab.com/ohrie/landtagswahl-landingpage#README"
+}
