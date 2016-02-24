@@ -329,6 +329,10 @@ $tile-normal-width: 20%;
           background-image: url("../img/mp.svg");
           background-size: 65%;
         }
+        > .partei{
+          background-image: url("../img/plakat.svg");
+          background-size: 65%;
+        }
         &:hover{
           > .search-logo{
             background-image: url("../img/suche-hover.svg");
@@ -344,6 +348,10 @@ $tile-normal-width: 20%;
           }
           > .mp{
             background-image: url("../img/mp-hover.svg");
+            background-size: 65%;
+          }
+          > .partei{
+            background-image: url("../img/plakat-hover.svg");
             background-size: 65%;
           }
         }

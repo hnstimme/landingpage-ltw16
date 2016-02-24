@@ -257,6 +257,9 @@ body {
       .lw .tile-grid .tile .logo > .mp {
         background-image: url("../img/mp.svg");
         background-size: 65%; }
+      .lw .tile-grid .tile .logo > .partei {
+        background-image: url("../img/plakat.svg");
+        background-size: 65%; }
       .lw .tile-grid .tile .logo:hover > .search-logo {
         background-image: url("../img/suche-hover.svg");
         background-size: 55%; }
@@ -268,6 +271,9 @@ body {
         background-size: 65%; }
       .lw .tile-grid .tile .logo:hover > .mp {
         background-image: url("../img/mp-hover.svg");
+        background-size: 65%; }
+      .lw .tile-grid .tile .logo:hover > .partei {
+        background-image: url("../img/plakat-hover.svg");
         background-size: 65%; }
       .lw .tile-grid .tile .logo #wahlkreis-suche-wrapper {
         width: 97%; }
